@@ -79,11 +79,12 @@ This table outlines the original V1 components alongside the newly specified V2 
 
 - _Clip 1: First Match. Spin the IRON vs Zyphra (Horizontal Spinner)_
 
-<video src="./videos/first-match.mp4" controls="controls" width="100%"></video>
+https://github.com/user-attachments/assets/9445c94e-30c5-4e7d-bc83-72d9ab0b626e
+
 
 - _Clip 2: Second Match. Spin the IRON vs Jollibot (Drum Spinner)_
 
-<video src="./videos/semi-finals-match.mp4" controls="controls" width="100%"></video>
+https://github.com/user-attachments/assets/ed43bb46-67b6-4195-94c0-906a0569c117
 
 ---
 
