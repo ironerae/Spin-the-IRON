@@ -1,6 +1,6 @@
 # Spin the IRON
 
-**Spin the IRON** is a custom-engineered ring-spinner combat robot built for 600g combat robot category. Originally designed with ESP32 microcontroller, the robot utilizes a custom 3D-printed chassis, independent tank steering, and a high-kinetic friction-drive weapon system.
+**Spin the IRON** is a custom-engineered ring-spinner combat robot built for 600g combat robot category. Originally designed with ESP32 microcontroller, the robot utilizes a custom 3D-printed chassis and a high-kinetic friction-drive weapon system.
 
 Following a strong 4th-place finish at the SMARRT (Science-Based Mechatronics, Autonomous Robotics, and Research Tournament) Palawan 2026 competition, this repository documents the robot's V1 build, combat performance, and the comprehensive V2 engineering upgrades planned to maximize its destructive power and arena reliability.
 
@@ -11,18 +11,18 @@ Following a strong 4th-place finish at the SMARRT (Science-Based Mechatronics, A
 The V1 iteration of _Spin the IRON_ relies on three primary systems:
 
 - **The Weapon Drive (Friction Ring Spinner):** The primary weapon is a 3D-printed PETG external ring driven by a 2205 Brushless DC (BLDC) outrunner motor. A rubber O-ring wrapped around the motor bell generates friction against the inner track of the weapon ring to transfer kinetic energy.
-- **The Mobility System (Arcade Tank Drive):** The robot is propelled by two independent N20 brushed gearmotors. Steering logic is calculated via algorithmic "Arcade Drive" mixing, translating X and Y joystick inputs into forward/reverse and differential turning speeds.
+- **The Mobility System:** The robot is driven by two N20 brushed gearmotors using TB6612FNG Motor Driver.
 - **The Control Protocol (ESP-NOW):** The initial control system bypassed standard Wi-Fi routers using ESP-NOW—a direct, peer-to-peer Wi-Fi protocol polling joystick data and transmitting control packets to an ESP32-C3 receiver.
 
 ---
 
-## Schematic & Wiring
+## Circuit Diagram & Wiring
 
-Click the links below to view or download all PDF Schematics
+- _Transmitter joystick and ESP32 Circuit Diagram_
+  ![Transmitter joystick and ESP32 Circuit Diagram](./images/transmitter-diagram.png)
 
-[Transmitter joystick and ESP32 Schematic](./docs/transmitter-schematic.pdf)
-
-[Spin the IRON Schematic](./docs/spin-the-iron-schematic.pdf)
+- _Spin the IRON Circuit Diagram_
+  ![Spin the IRON Circuit Diagram](./images/spin-the-iron-diagram.png)
 
 ---
 
@@ -39,10 +39,11 @@ This table outlines the original V1 components alongside the newly specified V2 
 | Component Category   | V1 Build (Current)            | V2 Upgrade (Planned)                       |
 | :------------------- | :---------------------------- | :----------------------------------------- |
 | **Control System**   | ESP32 & ESP32-C3 (ESP-NOW)    | FlySky FS-i6 & FS-iA6B Receiver            |
+|                      | 2pcs. PS2 Joystick Module     |                                            |
 | **Weapon Motor**     | 2205 BLDC Outrunner (2300 KV) | D2822 Outrunner (1100KV–1450KV)            |
 | **Weapon Drive**     | Rubber O-Ring Friction Drive  | GT2 Timing Belt & 3D Printed Pulley        |
 | **Drive Motors**     | 12V N20 Brushed Gearmotors    | 12V N20 Brushed Gearmotors                 |
-| **Drive Control**    | Custom ESP32 PWM Output       | Dual Way 5A Brushed ESC (Independent Mode) |
+| **Drive Control**    | TB6612FNG Motor Driver        | Dual Way 5A Brushed ESC (Independent Mode) |
 | **Chassis Material** | PETG Filament                 | TPU (Flexible) Filament                    |
 | **Weapon Material**  | PETG Filament                 | Carbon Fiber Nylon / Polycarbonate         |
 | **Power Supply**     | 3S (11.1V) LiPo Battery       | 3S (11.1V) LiPo Battery                    |
@@ -59,10 +60,8 @@ This table outlines the original V1 components alongside the newly specified V2 
 
 ## Images
 
-## Images
-
 - _Image 1: External view of the robot._
-  ![Top-down view](./images/external.jpg)
+  ![External view](./images/external.jpg)
 
 - _Image 2: Internal view of the robot._
   ![Electronics Bay](./images/internal.jpg)
@@ -73,6 +72,15 @@ This table outlines the original V1 components alongside the newly specified V2 
   _Image 4: Showing the battle-damaged after second match._
   ![Battle Damaged Weapon Ring](./images/match2-damage.png)
 
+  _Image 5: DIY Controller._
+  ![DIY Controller](./images/diy-controller.png)
+
+  _Image 6: DIY Controller - Internal._
+  ![DIY Controller](./images/diy-controller-internal.png)
+
+  _Image 7: Picture after the match._
+  ![Picture after the match](./images/after-match.jpeg)
+
 ---
 
 ## Match Clips
@@ -80,7 +88,6 @@ This table outlines the original V1 components alongside the newly specified V2 
 - _Clip 1: First Match. Spin the IRON vs Zyphra (Horizontal Spinner)_
 
 https://github.com/user-attachments/assets/9445c94e-30c5-4e7d-bc83-72d9ab0b626e
-
 
 - _Clip 2: Second Match. Spin the IRON vs Jollibot (Drum Spinner)_
 
